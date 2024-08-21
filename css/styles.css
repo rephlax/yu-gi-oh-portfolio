@@ -16,6 +16,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative; /* Needed for absolute positioning of the deck */
 }
 
 .card-spots, .empty-spots {
@@ -31,4 +32,50 @@ body {
     height: 300px;
     background-color: rgba(255, 255, 255, 0.5);
     border: 1px solid black;
+}
+
+#deck {
+    position: absolute;
+    bottom: 20px;
+    right: 20px; 
+    width: 200px;
+    height: 300px;
+}
+
+.deck-card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/yu-gi-oh\ card\ back.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid black;
+    border-radius: 6px;
+    overflow: hidden;
+    transform: rotate(-2deg);
+}
+
+.deck-card:nth-child(2) {
+    top: 5px;
+    left: 5px;
+    transform: rotate(-1deg);
+}
+
+.deck-card:nth-child(3) {
+    top: 10px;
+    left: 10px;
+    transform: rotate(0deg);
+}
+
+.deck-card:nth-child(4) {
+    top: 15px;
+    left: 15px;
+    transform: rotate(1deg);
+}
+
+.deck-card:nth-child(5) {
+    top: 20px;
+    left: 20px;
+    transform: rotate(2deg);
 }

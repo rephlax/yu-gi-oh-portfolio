@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yu-Gi-Oh Portfolio</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <title>Yu-Gi-Oh Inspired Portfolio</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="modal.css">
 </head>
 <body>
-    <div id="player-field">
-        <div class="card-spots">
-            <div id="fieldspot1"></div>
-            <div id="fieldspot2"></div>
-            <div id="fieldspot3"></div>
-            <div id="fieldspot4"></div>
-            <div id="fieldspot5"></div>
-        </div>
-        <div class="empty-spots">
-            <div class="empty-spot"></div>
-            <div class="empty-spot"></div>
-            <div class="empty-spot"></div>
-            <div class="empty-spot"></div>
-            <div class="empty-spot"></div>
-        </div>
-        <div id="deck">
-            <div class="deck-card" id="deck-card1"></div>
-            <div class="deck-card" id="deck-card2"></div>
-            <div class="deck-card" id="deck-card3"></div>
-            <div class="deck-card" id="deck-card4"></div>
-            <div class="deck-card" id="deck-card5"></div>
-        </div>
+    <div id="landing-page">
+        <magic-particles
+            class="particles"
+            quantity="150"
+            color="#ffffff"
+            size="0.5"
+            staticity="30"
+            ease="50"
+            vx="0.1"
+            vy="0.1"
+        ></magic-particles>
+        <h1>Welcome to my Portfolio</h1>
+        <button id="start-btn">Start</button>
     </div>
-    <div id="spots">
-        <div id="spot1"></div>
-        <div id="spot2"></div>
-        <div id="spot3"></div>
-        <div id="spot4"></div>
-        <div id="spot5"></div>
+
+    <div id="main-screen" style="display: none;">
+        <div id="deck"></div>
+        <div id="player-field"></div>
+        <div id="spots"></div>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="/js/main.js"></script>
+
+    <div id="modal-container">
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@magic-ui/core@latest/dist/magic-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="js/landingpage.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mainpage.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 </html>

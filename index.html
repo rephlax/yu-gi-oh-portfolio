@@ -3,42 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yu-Gi-Oh Inspired Portfolio</title>
-    <link rel="stylesheet" href="global.css">
-    <link rel="stylesheet" href="landing.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="modal.css">
+    <title>Yu-Gi-Oh Portfolio</title>
+    <link rel="stylesheet" href="css/buttons.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/playing-board.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/layout.css">
 </head>
 <body>
-    <div id="landing-page">
-        <magic-particles
-            class="particles"
-            quantity="150"
-            color="#ffffff"
-            size="0.5"
-            staticity="30"
-            ease="50"
-            vx="0.1"
-            vy="0.1"
-        ></magic-particles>
-        <h1>Welcome to my Portfolio</h1>
-        <button id="start-btn">Start</button>
+    <button class="start-button btn" role="button">hello</button>
+    <button class="btn button-cmn" role="button"><span class="text">Click me</span><span>Confirm</span></button>
+
+    <div id="card-container">
+        <div id="card-about-me" class="card-wrapper">
+            <div class="card-front">
+                <div class="card-name">About me</div>
+                <div class="star-container">
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                    <div class="star" v-for="n in 12"></div>
+                </div>
+                <div class="card-image"></div>
+                <div class="card-info">
+                    <div class="card-type">[About Me]</div>
+                    <div class="card-description">Playing this card will take you to the page about me! You can read through all of my hobbies, experiences and what I am currently up to.</div>
+                </div>
+                <div class="card-footer">
+                    <span class="atk">ATK / 2000</span>
+                    <span class="def">DEF / 2000</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Add more cards here with unique IDs -->
+        <!-- Example:
+        <div id="card-projects" class="card-wrapper">
+            ... (card content) ...
+        </div>
+        -->
     </div>
 
-    <div id="main-screen" style="display: none;">
-        <div id="deck"></div>
-        <div id="player-field"></div>
-        <div id="spots"></div>
-    </div>
-
-    <div id="modal-container">
-
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/@magic-ui/core@latest/dist/magic-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="js/landingpage.js"></script>
+    <script src="js/particles.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/mainpage.js"></script>
-    <script src="js/modal.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </body>
 </html>

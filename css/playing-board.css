@@ -1,0 +1,65 @@
+#playing-board {
+    overflow: hidden;
+    width: 100dvw;
+    width: 100vw;
+    height: 100dvh;
+    height: 100vh;
+}
+
+#board-background {
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/yu-gi-oh\ background.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#play-spot {
+    position: absolute;
+    top: -40px;
+}
+
+.spot, .card-front, .card-back {
+    width: 150px;
+    height: 217.5px;
+    margin: 20px;
+  }
+  
+  #rows {
+    position: absolute;
+    top: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #top-row, #bottom-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* space between cards */
+  }
+
+#deck {
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+    transform: rotate(-45deg);
+}
+
+.spot {
+    border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+    .spot, .card-front, .card-back {
+      width: 100px;
+      height: 145px;
+    }
+  }

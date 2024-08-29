@@ -9,7 +9,7 @@
 #board-background {
     width: 100%;
     height: 100%;
-    background-image: url("/images/yu-gi-oh\ background.webp");
+    background-color: black;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -55,11 +55,39 @@
 
 .spot {
     border: 1px solid white;
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
-    .spot, .card-front, .card-back {
-      width: 100px;
-      height: 145px;
+    #playing-board {
+        width: 100vw;
+        height: 100vh;
     }
-  }
+
+    #board-background {
+        display: block;
+    }
+
+    #play-spot {
+        top: -20px;
+    }
+
+    .spot, .card-front, .card-back {
+        width: 80px;
+        height: 116px;
+        margin: 10px;
+    }
+
+    #rows {
+        top: 20%;
+    }
+
+    #top-row, #bottom-row {
+        gap: 5px;
+    }
+
+    #deck {
+        right: -20px;
+        bottom: -20px;
+    }
+}
